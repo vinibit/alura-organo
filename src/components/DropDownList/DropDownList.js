@@ -1,13 +1,12 @@
 import './DropDownList.css';
 
 export const DropDownList = (props) => {
-    // Your code here
-
+    
     return (
         <div className="dropdown-list">
             <label>{props.label}:</label>
-            <select required={props.mandatory}>
-                <option value='' disabled selected hidden>{props.placeholder}</option>
+            <select onChange={event => props.onUpdated(event.target.value)} required={props.mandatory} value={props.value}>
+                <option value='' disabled hidden>{props.placeholder}</option>
                 {props.options.map((option, index) => <option key={index} value={option}>{option}</option>)}
             </select>
         </div>
