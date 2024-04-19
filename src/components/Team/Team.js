@@ -3,10 +3,11 @@ import './Team.css'
 
 export const Team = (props) => {
 
-    return (
+    return (props.members.length > 0 &&
         <section className='team' style={{ backgroundColor: props.secondaryColor }}>
             <h3 style={{ borderColor: props.primaryColor }}>{props.nome}</h3>
-            { 
+            <div className='members'>
+            {                 
                 props.members.map(member => <Member 
                     key={member.name} 
                     name={member.name} 
@@ -14,6 +15,7 @@ export const Team = (props) => {
                     image={member.image }
                 />)
             }
+            </div>
         </section>
     )
 }

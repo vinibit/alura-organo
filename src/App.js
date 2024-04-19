@@ -54,9 +54,7 @@ function App() {
             <Banner />
             <Form teams={teams.map(team => team.name)} onMemberSaved={onNewCardAdded} />
             {
-                teams
-                    .filter(team => members.some(member => member.team === team.name))
-                    .map(team => <Team 
+                teams.map(team => <Team 
                         key={team.name} 
                         nome={team.name}
                         primaryColor={team.primaryColor}
