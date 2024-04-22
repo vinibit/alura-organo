@@ -11,7 +11,8 @@ export const Team = (props) => {
                 props.members.map(member => <Member 
                     key={member.name} 
                     name={member.name} 
-                    position={member.position} 
+                    position={member.position}
+                    color={props.primaryColor}
                     image={member.image }
                 />)
             }

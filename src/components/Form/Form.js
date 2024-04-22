@@ -28,9 +28,9 @@ export const Form = (props) => {
         <section className="form">
             <form onSubmit={onSave}>
                 <h2>Preencha os dados para criar o card</h2>
-                <TextField mandatory={true} label="Nome" placeholder="Digite seu nome" value={name} onUpdated={value => setName(value)} />
-                <TextField mandatory={true} label="Cargo" placeholder="Digite seu cargo" value={position} onUpdated={value => setSetPosition(value)} />
-                <TextField label="Imagem" placeholder="Digite o endereço da imagem" value={image} onUpdated={value => setImage(value)} />
+                <TextField mandatory={true} label="Nome" placeholder="Digite seu nome" value={name} onUpdated={setName} />
+                <TextField mandatory={true} label="Cargo" placeholder="Digite seu cargo" value={position} onUpdated={setSetPosition} />
+                <TextField label="Imagem" placeholder="Digite o endereço da imagem" value={image} onUpdated={setImage} />
                 <DropDownList mandatory={true} label="Time" placeholder="Selecione o time" options={props.teams} value={team} onUpdated={setTeam} />
                 <Button>
                     Criar card

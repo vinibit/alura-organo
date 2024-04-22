@@ -47,6 +47,7 @@ function App() {
     const [members, setMembers] = useState([])
 
     const onNewCardAdded = (newCard) => {
+        debugger
         setMembers([...members, newCard])
     }
 
